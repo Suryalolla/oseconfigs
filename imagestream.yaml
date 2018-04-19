@@ -1,0 +1,174 @@
+apiVersion: v1
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: 2018-02-18T22:47:02Z
+    generation: 17
+    labels:
+      app: eap64-basic-s2i
+      application: tasks
+      template: eap64-basic-s2i
+      xpaas: 1.4.0
+    name: tasks
+    namespace: tasks-dev
+    resourceVersion: "180805"
+    selfLink: /apis/image.openshift.io/v1/namespaces/tasks-dev/imagestreams/tasks
+    uid: a2a713bd-14fd-11e8-93a4-16d7b91c7cc4
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: ImageStreamImage
+        name: tasks@sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+      generation: 5
+      importPolicy: {}
+      name: ProdReady-1.0
+      referencePolicy:
+        type: Source
+    - annotations: null
+      from:
+        kind: ImageStreamImage
+        name: tasks@525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+        namespace: tasks-dev
+      generation: 17
+      importPolicy: {}
+      name: ProdReady-1.7
+      referencePolicy:
+        type: Source
+    - annotations: null
+      from:
+        kind: ImageStreamImage
+        name: tasks@sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+      generation: 4
+      importPolicy: {}
+      name: TestingCandidate-1.0
+      referencePolicy:
+        type: Source
+    - annotations: null
+      from:
+        kind: ImageStreamImage
+        name: tasks@525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+        namespace: tasks-dev
+      generation: 16
+      importPolicy: {}
+      name: TestingCandidate-1.7
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: docker-registry.default.svc:5000/tasks-dev/tasks
+    tags:
+    - items:
+      - created: 2018-02-19T20:24:57Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+        generation: 5
+        image: sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+      tag: ProdReady-1.0
+    - items:
+      - created: 2018-04-02T15:53:20Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+        generation: 17
+        image: sha256:525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+      - created: 2018-03-27T03:56:20Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:c40de7436ec99027bf33b2b331ad87414981aee4a48813664ef3d5aebe92f2df
+        generation: 15
+        image: sha256:c40de7436ec99027bf33b2b331ad87414981aee4a48813664ef3d5aebe92f2df
+      - created: 2018-03-27T03:22:59Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:9b80772acf256389b5591b1ac4c1ad8c1b5db06255fee4bb08f0d6114ff1f9b7
+        generation: 13
+        image: sha256:9b80772acf256389b5591b1ac4c1ad8c1b5db06255fee4bb08f0d6114ff1f9b7
+      - created: 2018-02-19T21:46:21Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:c99a8523cee6d581d53cd4ffa384a29763a4155225d85c4a249e52cbf56b5a3e
+        generation: 11
+        image: sha256:c99a8523cee6d581d53cd4ffa384a29763a4155225d85c4a249e52cbf56b5a3e
+      - created: 2018-02-19T20:36:28Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:82b2a91cbef6fcd49fd032082c14641d2ac77109b4cc65b6c6e73c065c04abc2
+        generation: 9
+        image: sha256:82b2a91cbef6fcd49fd032082c14641d2ac77109b4cc65b6c6e73c065c04abc2
+      - created: 2018-02-19T20:28:34Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:e777362df4754c30c25fd6f1efceaaf5a842eefc98c01dd5afa807c40330701a
+        generation: 7
+        image: sha256:e777362df4754c30c25fd6f1efceaaf5a842eefc98c01dd5afa807c40330701a
+      - created: 2018-02-19T20:21:54Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+        generation: 3
+        image: sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+      tag: ProdReady-1.7
+    - items:
+      - created: 2018-02-19T20:24:49Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+        generation: 4
+        image: sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+      tag: TestingCandidate-1.0
+    - items:
+      - created: 2018-04-02T15:52:35Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+        generation: 16
+        image: sha256:525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+      - created: 2018-03-27T03:55:55Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:c40de7436ec99027bf33b2b331ad87414981aee4a48813664ef3d5aebe92f2df
+        generation: 14
+        image: sha256:c40de7436ec99027bf33b2b331ad87414981aee4a48813664ef3d5aebe92f2df
+      - created: 2018-03-27T03:22:24Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:9b80772acf256389b5591b1ac4c1ad8c1b5db06255fee4bb08f0d6114ff1f9b7
+        generation: 12
+        image: sha256:9b80772acf256389b5591b1ac4c1ad8c1b5db06255fee4bb08f0d6114ff1f9b7
+      - created: 2018-02-19T21:45:46Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:c99a8523cee6d581d53cd4ffa384a29763a4155225d85c4a249e52cbf56b5a3e
+        generation: 10
+        image: sha256:c99a8523cee6d581d53cd4ffa384a29763a4155225d85c4a249e52cbf56b5a3e
+      - created: 2018-02-19T20:36:02Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:82b2a91cbef6fcd49fd032082c14641d2ac77109b4cc65b6c6e73c065c04abc2
+        generation: 8
+        image: sha256:82b2a91cbef6fcd49fd032082c14641d2ac77109b4cc65b6c6e73c065c04abc2
+      - created: 2018-02-19T20:27:59Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:e777362df4754c30c25fd6f1efceaaf5a842eefc98c01dd5afa807c40330701a
+        generation: 6
+        image: sha256:e777362df4754c30c25fd6f1efceaaf5a842eefc98c01dd5afa807c40330701a
+      - created: 2018-02-19T20:21:28Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+        generation: 2
+        image: sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+      tag: TestingCandidate-1.7
+    - items:
+      - created: 2018-04-02T15:52:33Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+        generation: 15
+        image: sha256:525a94e318178eda723951f2301bfdaa4e72e4904d242775af1b7051578c4792
+      - created: 2018-03-27T03:55:54Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:c40de7436ec99027bf33b2b331ad87414981aee4a48813664ef3d5aebe92f2df
+        generation: 13
+        image: sha256:c40de7436ec99027bf33b2b331ad87414981aee4a48813664ef3d5aebe92f2df
+      - created: 2018-03-27T03:22:22Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:9b80772acf256389b5591b1ac4c1ad8c1b5db06255fee4bb08f0d6114ff1f9b7
+        generation: 11
+        image: sha256:9b80772acf256389b5591b1ac4c1ad8c1b5db06255fee4bb08f0d6114ff1f9b7
+      - created: 2018-02-19T21:45:44Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:c99a8523cee6d581d53cd4ffa384a29763a4155225d85c4a249e52cbf56b5a3e
+        generation: 9
+        image: sha256:c99a8523cee6d581d53cd4ffa384a29763a4155225d85c4a249e52cbf56b5a3e
+      - created: 2018-02-19T20:36:01Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:82b2a91cbef6fcd49fd032082c14641d2ac77109b4cc65b6c6e73c065c04abc2
+        generation: 7
+        image: sha256:82b2a91cbef6fcd49fd032082c14641d2ac77109b4cc65b6c6e73c065c04abc2
+      - created: 2018-02-19T20:27:57Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:e777362df4754c30c25fd6f1efceaaf5a842eefc98c01dd5afa807c40330701a
+        generation: 5
+        image: sha256:e777362df4754c30c25fd6f1efceaaf5a842eefc98c01dd5afa807c40330701a
+      - created: 2018-02-19T20:21:27Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+        generation: 1
+        image: sha256:f5e6bd1c6cc1a2e138f26646c754e44aadb95d405e7f10c09e0b0a4ccb55db35
+      - created: 2018-02-19T20:20:19Z
+        dockerImageReference: docker-registry.default.svc:5000/tasks-dev/tasks@sha256:33a7abf10e50cfd999d7a423fa351f612100eb8731e9f191379e0498426089c5
+        generation: 1
+        image: sha256:33a7abf10e50cfd999d7a423fa351f612100eb8731e9f191379e0498426089c5
+      tag: latest
+kind: List
+metadata: {}
+resourceVersion: ""
+selfLink: ""

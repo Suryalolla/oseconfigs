@@ -1,0 +1,63 @@
+apiVersion: v1
+items:
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: 2018-02-18T22:47:02Z
+    labels:
+      app: eap64-basic-s2i
+      application: tasks
+      template: eap64-basic-s2i
+      xpaas: 1.4.0
+    name: tasks
+    namespace: tasks-dev
+    resourceVersion: "180664"
+    selfLink: /apis/build.openshift.io/v1/namespaces/tasks-dev/buildconfigs/tasks
+    uid: a2a8e7f7-14fd-11e8-93a4-16d7b91c7cc4
+  spec:
+    failedBuildsHistoryLimit: 5
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: tasks:latest
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      contextDir: /
+      git:
+        ref: master
+        uri: https://github.com/cjsrinivas/openshift-tasks-ocp.git
+      type: Git
+    strategy:
+      sourceStrategy:
+        env:
+        - name: MAVEN_MIRROR_URL
+        - name: ARTIFACT_DIR
+        forcePull: true
+        from:
+          kind: ImageStreamTag
+          name: jboss-eap64-openshift:1.6
+          namespace: openshift
+      type: Source
+    successfulBuildsHistoryLimit: 5
+    triggers:
+    - github:
+        secret: ircX83ED
+      type: GitHub
+    - generic:
+        secret: Ie0l5TLn
+      type: Generic
+    - imageChange:
+        lastTriggeredImageID: registry.access.redhat.com/jboss-eap-6/eap64-openshift@sha256:03416282b034b93614ab2af74441ce481226bcf0b0b6c614cacd1b6f008f9792
+      type: ImageChange
+    - type: ConfigChange
+  status:
+    lastVersion: 8
+kind: List
+metadata: {}
+resourceVersion: ""
+selfLink: ""

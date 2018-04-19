@@ -1,0 +1,40 @@
+apiVersion: v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      description: Route for application's http service.
+      openshift.io/generated-by: OpenShiftNewApp
+      openshift.io/host.generated: "true"
+    creationTimestamp: 2018-02-18T22:47:02Z
+    labels:
+      app: eap64-basic-s2i
+      application: tasks
+      template: eap64-basic-s2i
+      xpaas: 1.4.0
+    name: tasks
+    namespace: tasks-dev
+    resourceVersion: "32702"
+    selfLink: /apis/route.openshift.io/v1/namespaces/tasks-dev/routes/tasks
+    uid: a2a53e63-14fd-11e8-93a4-16d7b91c7cc4
+  spec:
+    host: tasks-tasks-dev.oseapps.levvel-labs.io
+    to:
+      kind: Service
+      name: tasks
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: 2018-02-18T22:47:02Z
+        status: "True"
+        type: Admitted
+      host: tasks-tasks-dev.oseapps.levvel-labs.io
+      routerName: router
+      wildcardPolicy: None
+kind: List
+metadata: {}
+resourceVersion: ""
+selfLink: ""
